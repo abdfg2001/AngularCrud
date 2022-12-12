@@ -1,0 +1,27 @@
+
+<br>
+<div class="center borde">
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#Product Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of temp">
+        <td>{{product.productID}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>
+          <a class="text-primary" (click)="remove(product.productID)">Delete</a>
+        </td>
+        <td>
+            <a class="text-primary" (click)="edit(product.productID)">Edit</a>
+        </td>
+      </tr>
+      <a [routerLink]="['/create']"> Create </a>
+    </tbody>
+</table>
+</div>
